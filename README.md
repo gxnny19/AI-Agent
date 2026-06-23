@@ -15,8 +15,7 @@ MealGPT는 냉장고 사진을 업로드하면 AI가 식재료를 인식하고, 
 
 ## 기술 스택
 
-- Python
-- FastAPI
+- Java (Spring Boot)
 - Ollama
 - HTML/CSS/JavaScript
 
@@ -30,17 +29,36 @@ ollama pull gemma4:latest
 
 ## 실행 방법
 
+이 저장소는 Java Spring Boot 애플리케이션입니다. 로컬에서 실행하려면 Maven과 JDK 17+(권장: 21)가 필요합니다.
+
+간단 실행 스크립트를 프로젝트 루트에 추가했습니다: Windows PowerShell용 `run-java.ps1`, POSIX용 `run-java.sh`.
+
+Windows (PowerShell)
+
 ```powershell
-python -m venv venv
-.\venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --host 127.0.0.1 --port 8000
+.\run-java.ps1
+```
+
+Unix / WSL / macOS
+
+```bash
+./run-java.sh
+```
+
+직접 명령을 사용하려면:
+
+```bash
+# 빌드
+mvn clean package
+
+# 실행(또는 `mvn spring-boot:run` 사용)
+java -jar target/meal-gpt-agent-0.1.0.jar
 ```
 
 브라우저에서 아래 주소를 엽니다.
 
 ```text
-http://127.0.0.1:8000/ai-test
+http://127.0.0.1:8080/
 ```
 
 ## API
