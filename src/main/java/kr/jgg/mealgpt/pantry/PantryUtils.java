@@ -148,6 +148,21 @@ public final class PantryUtils {
         return text;
     }
 
+    public static boolean hasMapping(String item) {
+        if (item == null || item.trim().isEmpty()) {
+            return false;
+        }
+        String text = item.trim();
+        String normalized = normalizeItemName(text);
+        if (KOREAN_ALIASES.containsKey(text)) {
+            return true;
+        }
+        if (KOREAN_ITEM_NAMES.containsKey(text)) {
+            return true;
+        }
+        return COMPACT_NAMES.containsKey(normalized);
+    }
+
     public static boolean isPantryItem(String item) {
         String normalized = normalizeItemName(item);
         for (String pantry : PANTRY_ITEMS) {

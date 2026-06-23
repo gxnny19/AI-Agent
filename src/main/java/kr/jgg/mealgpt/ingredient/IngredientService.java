@@ -114,9 +114,21 @@ public class IngredientService {
 
     private void addIngredient(Set<String> ingredients, String rawName) {
         String value = PantryUtils.toKoreanItemName(rawName);
-        if (!value.isEmpty() && !isNonIngredient(value)) {
-            ingredients.add(value);
+        if (value == null) {
+            return;
         }
+        // Filter out empty, non-ingredient and likely-hallucinated values.
+        if (value.isEmpty() || isNonIngredient(value)) {
+            return;
+        }
+        // If the item is not a known mapping and the returned value is not Korean,
+        // treat it as potentially hallucinated and skip it. This reduces false
+        // positives like "plate", "spoon" or model guesses.
+        boolean hasMapping = PantryUtils.hasMapping(rawName);
+        if (!hasMapping && !value.matches(".*[가-힣].*")) {
+            return;
+        }
+        ingredients.add(value);
     }
 
     private boolean isNonIngredient(String value) {
