@@ -1,0 +1,1005 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< kr.jgg:meal-gpt-agent >------------------------
+[INFO] Building MealGPT Agent 0.1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:2.7.18:run (default-cli) > test-compile @ meal-gpt-agent >>>
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ meal-gpt-agent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ meal-gpt-agent ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ meal-gpt-agent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory C:\jgg\AI-Agent\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ meal-gpt-agent ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\jgg\AI-Agent\target\test-classes
+[INFO] 
+[INFO] <<< spring-boot:2.7.18:run (default-cli) < test-compile @ meal-gpt-agent <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:2.7.18:run (default-cli) @ meal-gpt-agent ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-06-23 13:06:28.345  INFO 21916 --- [           main] kr.jgg.mealgpt.MealGptApplication        : Starting MealGptApplication using Java 17.0.19 on C302-50 with PID 21916 (C:\jgg\AI-Agent\target\classes started by USER in C:\jgg\AI-Agent)
+2026-06-23 13:06:28.345  INFO 21916 --- [           main] kr.jgg.mealgpt.MealGptApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-23 13:06:28.345 DEBUG 21916 --- [           main] o.s.boot.SpringApplication               : Loading source class kr.jgg.mealgpt.MealGptApplication
+2026-06-23 13:06:28.367 DEBUG 21916 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75c56eb9
+2026-06-23 13:06:28.681 DEBUG 21916 --- [           main] ySourcesPropertyResolver$DefaultResolver : Found key 'PORT' in PropertySource 'systemEnvironment' with value of type String
+2026-06-23 13:06:28.801 DEBUG 21916 --- [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\USER\.m2\repository\org\springframework\boot\spring-boot\2.7.18\spring-boot-2.7.18.jar
+2026-06-23 13:06:28.801 DEBUG 21916 --- [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\USER\.m2\repository\org\springframework\boot\spring-boot\2.7.18\spring-boot-2.7.18.jar
+2026-06-23 13:06:28.801 DEBUG 21916 --- [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Document root: C:\jgg\AI-Agent\static
+2026-06-23 13:06:28.817  INFO 21916 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-06-23 13:06:28.817  INFO 21916 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-23 13:06:28.817  INFO 21916 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-06-23 13:06:28.866  INFO 21916 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-23 13:06:28.866 DEBUG 21916 --- [           main] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-06-23 13:06:28.866  INFO 21916 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 499 ms
+2026-06-23 13:06:28.884 DEBUG 21916 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-06-23 13:06:28.884 DEBUG 21916 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-06-23 13:06:28.884 DEBUG 21916 --- [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2026-06-23 13:06:28.884 DEBUG 21916 --- [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-06-23 13:06:28.884 DEBUG 21916 --- [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2026-06-23 13:06:28.916 DEBUG 21916 --- [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'kr.jgg.mealgpt'. Automatic @Repository and @Entity scanning is enabled.
+2026-06-23 13:06:28.968 DEBUG 21916 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-23 13:06:28.984  INFO 21916 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-06-23 13:06:29.011 DEBUG 21916 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+2026-06-23 13:06:29.018 DEBUG 21916 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-06-23 13:06:29.018 DEBUG 21916 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-23 13:06:29.050  INFO 21916 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-06-23 13:06:29.050 DEBUG 21916 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   AopAutoConfiguration matched:
+      - @ConditionalOnProperty (spring.aop.auto=true) matched (OnPropertyCondition)
+
+   AopAutoConfiguration.ClassProxyingConfiguration matched:
+      - @ConditionalOnMissingClass did not find unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
+      - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   ApplicationAvailabilityAutoConfiguration#applicationAvailability matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.availability.ApplicationAvailability; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   DispatcherServletAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletConfiguration matched:
+      - @ConditionalOnClass found required class 'javax.servlet.ServletRegistration' (OnClassCondition)
+      - Default DispatcherServlet did not find dispatcher servlet beans (DispatcherServletAutoConfiguration.DefaultDispatcherServletCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration matched:
+      - @ConditionalOnClass found required class 'javax.servlet.ServletRegistration' (OnClassCondition)
+      - DispatcherServlet Registration did not find servlet registration bean (DispatcherServletAutoConfiguration.DispatcherServletRegistrationCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration matched:
+      - @ConditionalOnBean (names: dispatcherServlet types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration matched:
+      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnWarDeployment the application is not deployed as a WAR file. (OnWarDeploymentCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.TomcatWebServerFactoryCustomizerConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol' (OnClassCondition)
+
+   ErrorMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ErrorMvcAutoConfiguration#basicErrorController matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorController; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.servlet.error.ErrorViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
+      - @ConditionalOnProperty (server.error.whitelabel.enabled) matched (OnPropertyCondition)
+      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
+      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   GenericCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration automatic cache type (CacheCondition)
+
+   HttpEncodingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnProperty (server.servlet.encoding.enabled) matched (OnPropertyCondition)
+
+   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+
+   HttpMessageConvertersAutoConfiguration#messageConverters matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.http.HttpMessageConverters; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.StringHttpMessageConverter' (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClassCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+      - @ConditionalOnProperty (spring.mvc.converters.preferred-json-mapper=jackson) matched (OnPropertyCondition)
+      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jacksonObjectMapper' (OnBeanCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration#mappingJackson2HttpMessageConverter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter ignored: org.springframework.hateoas.server.mvc.TypeConstrainedMappingJackson2HttpMessageConverter,org.springframework.data.rest.webmvc.alps.AlpsJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
+      - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   MultipartAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.multipart.support.StandardServletMultipartResolver', 'javax.servlet.MultipartConfigElement' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnProperty (spring.servlet.multipart.enabled) matched (OnPropertyCondition)
+
+   MultipartAutoConfiguration#multipartConfigElement matched:
+      - @ConditionalOnMissingBean (types: javax.servlet.MultipartConfigElement,org.springframework.web.multipart.commons.CommonsMultipartResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   MultipartAutoConfiguration#multipartResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   NoOpCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration automatic cache type (CacheCondition)
+
+   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   RestTemplateAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.client.RestTemplate' (OnClassCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on RestTemplateAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (RestTemplateAutoConfiguration.NotReactiveWebApplicationCondition)
+
+   RestTemplateAutoConfiguration#restTemplateBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.client.RestTemplateBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   RestTemplateAutoConfiguration#restTemplateBuilderConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.client.RestTemplateBuilderConfigurer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ServletWebServerFactoryAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'javax.servlet.ServletRequest' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   ServletWebServerFactoryAutoConfiguration#tomcatServletWebServerFactoryCustomizer matched:
+      - @ConditionalOnClass found required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+
+   ServletWebServerFactoryConfiguration.EmbeddedTomcat matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.server.ServletWebServerFactory; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   SimpleCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration automatic cache type (CacheCondition)
+
+   SqlInitializationAutoConfiguration matched:
+      - @ConditionalOnProperty (spring.sql.init.enabled) matched (OnPropertyCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever @ConditionalOnProperty (spring.sql.init.mode=never) did not find property 'mode' (SqlInitializationAutoConfiguration.SqlInitializationModeCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutionAutoConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration#taskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.TaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskSchedulingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
+
+   TaskSchedulingAutoConfiguration#taskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.TaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'javax.validation.executable.ExecutableValidator' (OnClassCondition)
+      - @ConditionalOnResource found location classpath:META-INF/services/javax.validation.spi.ValidationProvider (OnResourceCondition)
+
+   ValidationAutoConfiguration#defaultValidator matched:
+      - @ConditionalOnMissingBean (types: javax.validation.Validator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ValidationAutoConfiguration#methodValidationPostProcessor matched:
+      - @ConditionalOnMissingBean (types: org.springframework.validation.beanvalidation.MethodValidationPostProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
+      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
+      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
+      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebSocketServletAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'javax.websocket.server.ServerContainer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.tomcat.websocket.server.WsSci' (OnClassCondition)
+
+   WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration#websocketServletWebServerCustomizer matched:
+      - @ConditionalOnMissingBean (names: websocketServletWebServerCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   ActiveMQAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.jms.ConnectionFactory' (OnClassCondition)
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   ArtemisAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.jms.ConnectionFactory' (OnClassCondition)
+
+   BatchAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.batch.core.launch.JobLauncher' (OnClassCondition)
+
+   Cache2kCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
+
+   CacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+
+   CaffeineCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+
+   CassandraAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.cassandra.ReactiveSession' (OnClassCondition)
+
+   CassandraRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   ClientHttpConnectorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   CodecsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   CouchbaseAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
+
+   CouchbaseReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
+
+   DataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+   DataSourceInitializationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+
+   DispatcherServletAutoConfiguration.DispatcherServletConfiguration#multipartResolver:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not find any beans of type org.springframework.web.multipart.MultipartResolver (OnBeanCondition)
+
+   EhCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'net.sf.ehcache.Cache' (OnClassCondition)
+
+   ElasticsearchDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate' (OnClassCondition)
+
+   ElasticsearchRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.elasticsearch.client.Client' (OnClassCondition)
+
+   ElasticsearchRestClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.elasticsearch.client.RestClientBuilder' (OnClassCondition)
+
+   EmbeddedLdapAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.unboundid.ldap.listener.InMemoryDirectoryServer' (OnClassCondition)
+
+   EmbeddedMongoAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.MongoClientSettings' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.JettyWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util.Loader', 'org.eclipse.jetty.webapp.WebAppContext' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.NettyWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.netty.http.server.HttpServer' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.UndertowWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnClassCondition)
+
+   ErrorWebFluxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+
+   FlywayAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.flywaydb.core.Flyway' (OnClassCondition)
+
+   FreeMarkerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
+
+   GraphQlAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlQueryByExampleAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlQuerydslAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlRSocketAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlReactiveQueryByExampleAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlReactiveQuerydslAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlWebFluxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlWebFluxSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlWebMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GraphQlWebMvcSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   GroovyTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
+
+   GsonAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   GsonHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   H2ConsoleAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.h2.server.web.WebServlet' (OnClassCondition)
+
+   HazelcastAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HazelcastCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HazelcastJpaDependencyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HibernateJpaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.persistence.EntityManager' (OnClassCondition)
+
+   HttpHandlerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.DispatcherHandler' (OnClassCondition)
+
+   HypermediaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.hateoas.EntityModel' (OnClassCondition)
+
+   InfinispanCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+
+   InfluxDbAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.influxdb.InfluxDB' (OnClassCondition)
+
+   IntegrationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.integration.config.EnableIntegration' (OnClassCondition)
+
+   JCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+
+   JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
+
+   JdbcRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration' (OnClassCondition)
+
+   JdbcTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+
+   JerseyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.glassfish.jersey.server.spring.SpringComponentProvider' (OnClassCondition)
+
+   JmsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.jms.Message' (OnClassCondition)
+
+   JmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.jmx.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
+
+   JndiConnectionFactoryAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jms.core.JmsTemplate' (OnClassCondition)
+
+   JndiDataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+   JooqAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.jooq.DSLContext' (OnClassCondition)
+
+   JpaRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
+
+   JsonbAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.json.bind.Jsonb' (OnClassCondition)
+
+   JsonbHttpMessageConvertersConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.json.bind.Jsonb' (OnClassCondition)
+
+   JtaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.transaction.Transaction' (OnClassCondition)
+
+   KafkaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.kafka.core.KafkaTemplate' (OnClassCondition)
+
+   LdapAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.ldap.core.ContextSource' (OnClassCondition)
+
+   LdapRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.ldap.repository.LdapRepository' (OnClassCondition)
+
+   LiquibaseAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'liquibase.change.DatabaseChange' (OnClassCondition)
+
+   MailSenderAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.activation.MimeType' (OnClassCondition)
+
+   MailSenderValidatorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnSingleCandidate did not find required type 'org.springframework.mail.javamail.JavaMailSenderImpl' (OnBeanCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   MongoAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MongoDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MustacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
+
+   Neo4jAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   NettyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.netty.util.NettyRuntime' (OnClassCondition)
+
+   OAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   OAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.BearerTokenAuthenticationToken' (OnClassCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor' (OnClassCondition)
+
+   ProjectInfoAutoConfiguration#buildProperties:
+      Did not match:
+         - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.properties}' (OnResourceCondition)
+
+   ProjectInfoAutoConfiguration#gitProperties:
+      Did not match:
+         - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvailableCondition)
+
+   QuartzAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.quartz.Scheduler' (OnClassCondition)
+
+   R2dbcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+
+   R2dbcDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.r2dbc.core.R2dbcEntityTemplate' (OnClassCondition)
+
+   R2dbcInitializationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.r2dbc.spi.ConnectionFactory', 'org.springframework.r2dbc.connection.init.DatabasePopulator' (OnClassCondition)
+
+   R2dbcRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+
+   R2dbcTransactionManagerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.r2dbc.connection.R2dbcTransactionManager' (OnClassCondition)
+
+   RSocketGraphQlClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
+
+   RSocketMessagingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RSocketRequesterAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RSocketSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.rsocket.core.SecuritySocketAcceptorInterceptor' (OnClassCondition)
+
+   RSocketServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.core.RSocketServer' (OnClassCondition)
+
+   RSocketStrategiesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.netty.buffer.PooledByteBufAllocator' (OnClassCondition)
+
+   RabbitAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.rabbitmq.client.Channel' (OnClassCondition)
+
+   ReactiveElasticsearchRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.reactive.ReactiveElasticsearchClient' (OnClassCondition)
+
+   ReactiveElasticsearchRestClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.netty.http.client.HttpClient' (OnClassCondition)
+
+   ReactiveMultipartAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+
+   ReactiveOAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
+   ReactiveOAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+
+   ReactiveSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
+   ReactiveUserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.ReactiveAuthenticationManager' (OnClassCondition)
+
+   ReactiveWebServerFactoryAutoConfiguration:
+      Did not match:
+         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+
+   RedisAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.core.RedisOperations' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   RedisReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
+   RedisRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.repository.configuration.EnableRedisRepositories' (OnClassCondition)
+
+   RepositoryRestMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' (OnClassCondition)
+
+   Saml2RelyingPartyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (OnClassCondition)
+
+   SecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityFilterAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+
+   SendGridAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.sendgrid.SendGrid' (OnClassCondition)
+
+   ServletWebServerFactoryAutoConfiguration.ForwardedHeaderFilterConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
+
+   ServletWebServerFactoryConfiguration.EmbeddedJetty:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util.Loader', 'org.eclipse.jetty.webapp.WebAppContext' (OnClassCondition)
+
+   ServletWebServerFactoryConfiguration.EmbeddedUndertow:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnClassCondition)
+
+   SessionAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.session.Session' (OnClassCondition)
+
+   SolrAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.solr.client.solrj.impl.CloudSolrClient' (OnClassCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.application.admin.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+
+   SpringDataWebAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.web.PageableHandlerMethodArgumentResolver' (OnClassCondition)
+
+   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   TaskSchedulingAutoConfiguration#taskScheduler:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   ThymeleafAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring5.SpringTemplateEngine' (OnClassCondition)
+
+   TransactionAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   WebClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   WebFluxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarAssetLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebServiceTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.oxm.Marshaller' (OnClassCondition)
+
+   WebServicesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.ws.transport.http.MessageDispatcherServlet' (OnClassCondition)
+
+   WebSessionIdResolverAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Mono' (OnClassCondition)
+
+   WebSocketMessagingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer' (OnClassCondition)
+
+   WebSocketReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+
+   WebSocketServletAutoConfiguration.Jetty10WebSocketConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.websocket.javax.server.internal.JavaxWebSocketServerContainer', 'org.eclipse.jetty.websocket.server.JettyWebSocketServerContainer' (OnClassCondition)
+
+   WebSocketServletAutoConfiguration.JettyWebSocketConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer' (OnClassCondition)
+
+   WebSocketServletAutoConfiguration.UndertowWebSocketConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.undertow.websockets.jsr.Bootstrap' (OnClassCondition)
+
+   XADataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.transaction.TransactionManager' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+
+    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+
+
+
+2026-06-23 13:06:29.050  INFO 21916 --- [           main] kr.jgg.mealgpt.MealGptApplication        : Started MealGptApplication in 0.923 seconds (JVM running for 1.083)
+2026-06-23 13:06:29.050 DEBUG 21916 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-06-23 13:06:29.050 DEBUG 21916 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-06-23 13:06:38.834  INFO 21916 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-23 13:06:38.834  INFO 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-23 13:06:38.834 DEBUG 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-06-23 13:06:38.834 DEBUG 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-06-23 13:06:38.834 DEBUG 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-06-23 13:06:38.834 DEBUG 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@795a1c44
+2026-06-23 13:06:38.834 DEBUG 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@9a5d0d4
+2026-06-23 13:06:38.834 DEBUG 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-06-23 13:06:38.834  INFO 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-06-23 13:06:38.839 DEBUG 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/openclaw/status", parameters={}
+2026-06-23 13:06:38.844 DEBUG 21916 --- [nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to kr.jgg.mealgpt.api.OpenClawController#status()
+2026-06-23 13:06:38.852 DEBUG 21916 --- [nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2026-06-23 13:06:38.852 DEBUG 21916 --- [nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{latest_upload=EGG.jpg, spoonacular_configured=true, ollama_base_url=http://127.0.0.1:11434, ollama_ (truncated)...]
+2026-06-23 13:06:38.865 DEBUG 21916 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-06-23 13:07:30.711 DEBUG 21916 --- [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2026-06-23 13:07:30.721 DEBUG 21916 --- [nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to kr.jgg.mealgpt.api.MealGptController#index()
+2026-06-23 13:07:30.724 DEBUG 21916 --- [nio-8081-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2026-06-23 13:07:30.724 DEBUG 21916 --- [nio-8081-exec-7] o.s.w.servlet.view.InternalResourceView  : View name 'forward:', model {}
+2026-06-23 13:07:30.725 DEBUG 21916 --- [nio-8081-exec-7] o.s.w.servlet.view.InternalResourceView  : Forwarding to [/index.html]
+2026-06-23 13:07:30.726 DEBUG 21916 --- [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : "FORWARD" dispatch for GET "/index.html", parameters={}
+2026-06-23 13:07:30.728 DEBUG 21916 --- [nio-8081-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-06-23 13:07:30.751 DEBUG 21916 --- [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "FORWARD" dispatch, status 200
+2026-06-23 13:07:30.751 DEBUG 21916 --- [nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-06-23 13:07:30.751 DEBUG 21916 --- [nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/assets/meal-gpt-logo.svg", parameters={}
+2026-06-23 13:07:30.751 DEBUG 21916 --- [nio-8081-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-06-23 13:07:30.766 DEBUG 21916 --- [nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-06-23 13:07:30.786 DEBUG 21916 --- [nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/cart", parameters={}
+2026-06-23 13:07:30.787 DEBUG 21916 --- [nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to kr.jgg.mealgpt.api.MealGptController#cart()
+2026-06-23 13:07:30.787 DEBUG 21916 --- [nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2026-06-23 13:07:30.787 DEBUG 21916 --- [nio-8081-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{cart=[]}]
+2026-06-23 13:07:30.788 DEBUG 21916 --- [nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-06-23 13:07:41.755 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/analyze", parameters={multipart}
+2026-06-23 13:07:41.769 DEBUG 21916 --- [nio-8081-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to kr.jgg.mealgpt.api.MealGptController#analyze(MultipartFile)
+2026-06-23 13:07:41.782 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : HTTP POST http://127.0.0.1:11434/api/chat
+2026-06-23 13:07:41.783 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2026-06-23 13:07:41.785 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : Writing [{stream=false, messages=[{images=[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], role=user, content=You are an ingredient extraction engine for refrigerator photos.
+Look at the uploaded image and extract only visible edible ingredients.
+Return Korean common ingredient names only.
+Do not include quantities, units, descriptions, brands, containers, packaging, dishes, cups, trays, tools, or uncertain guesses.
+Do not return objects. Do not return markdown. Do not add explanations.
+Return exactly one valid JSON object with this schema:
+{"ingredients":["계란","양상추","파프리카"]}
+If no ingredient is visible, return {"ingredients":[]}.}], model=llava:latest}] as "application/json"
+2026-06-23 13:08:00.146 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : Response 200 OK
+2026-06-23 13:08:00.147 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json;charset=utf-8"
+2026-06-23 13:08:00.233 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : HTTP GET https://api.spoonacular.com/recipes/findByIngredients?apiKey=e7bb70f3177b4f95bbb93780c5aa338d&ingredients=%EA%B3%84%EB%9E%80,%EC%96%91%EC%83%81%EC%B6%94,%ED%8C%8C%ED%94%84%EB%A6%AC%EC%B9%B4&number=20&ranking=1&ignorePantry=true
+2026-06-23 13:08:00.233 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2026-06-23 13:08:01.582 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : Response 200 OK
+2026-06-23 13:08:01.582 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.client.RestTemplate              : Reading to [com.fasterxml.jackson.databind.JsonNode]
+2026-06-23 13:08:01.585 DEBUG 21916 --- [nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2026-06-23 13:08:01.586 DEBUG 21916 --- [nio-8081-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{recipes=[], ingredients=[계란, 양상추, 파프리카], raw= ```json<EOL>{<EOL>    "ingredients": ["계란", "양상추", "파프리카"]<EOL>}<EOL> (truncated)...]
+2026-06-23 13:08:01.587 DEBUG 21916 --- [nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
