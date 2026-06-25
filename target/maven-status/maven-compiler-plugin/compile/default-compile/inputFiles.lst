@@ -1,0 +1,15 @@
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\config\SecretResolver.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\recipe\RecipeService.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\ingredient\IngredientService.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\pantry\PantryUtils.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\api\ApiExceptionHandler.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\config\MealGptProperties.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\cart\CartService.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\api\MealGptController.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\common\TextUtils.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\MealGptApplication.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\upload\UploadService.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\cart\CartItem.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\ollama\OllamaClient.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\recipe\RecipeDto.java
+C:\jgg\AI-Agent\src\main\java\kr\jgg\mealgpt\api\OpenClawController.java

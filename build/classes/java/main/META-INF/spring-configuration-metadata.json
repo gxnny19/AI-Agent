@@ -1,0 +1,60 @@
+{
+  "groups": [
+    {
+      "name": "meal-gpt",
+      "type": "kr.jgg.mealgpt.config.MealGptProperties",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties"
+    },
+    {
+      "name": "meal-gpt.ollama",
+      "type": "kr.jgg.mealgpt.config.MealGptProperties$Ollama",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties",
+      "sourceMethod": "getOllama()"
+    },
+    {
+      "name": "meal-gpt.openclaw",
+      "type": "kr.jgg.mealgpt.config.MealGptProperties$OpenClaw",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties",
+      "sourceMethod": "getOpenclaw()"
+    },
+    {
+      "name": "meal-gpt.spoonacular",
+      "type": "kr.jgg.mealgpt.config.MealGptProperties$Spoonacular",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties",
+      "sourceMethod": "getSpoonacular()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "meal-gpt.ollama.base-url",
+      "type": "java.lang.String",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties$Ollama",
+      "defaultValue": "http:\/\/127.0.0.1:11434"
+    },
+    {
+      "name": "meal-gpt.ollama.model",
+      "type": "java.lang.String",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties$Ollama",
+      "defaultValue": "llama3.2-vision:latest"
+    },
+    {
+      "name": "meal-gpt.openclaw.shared-secret",
+      "type": "java.lang.String",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties$OpenClaw",
+      "defaultValue": ""
+    },
+    {
+      "name": "meal-gpt.spoonacular.api-key",
+      "type": "java.lang.String",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties$Spoonacular",
+      "defaultValue": ""
+    },
+    {
+      "name": "meal-gpt.upload-dir",
+      "type": "java.lang.String",
+      "sourceType": "kr.jgg.mealgpt.config.MealGptProperties",
+      "defaultValue": "uploads"
+    }
+  ],
+  "hints": []
+}
