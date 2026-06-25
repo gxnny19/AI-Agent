@@ -3,6 +3,11 @@ venv/
 __pycache__/
 *.py[cod]
 uploads/
+.gradle/
+build/
+target/
+out/
+*.log
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
