@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MealGPT</title>
+    <link rel="icon" href="/assets/meal-gpt-logo.svg" type="image/svg+xml">
+    <style>
+        :root {
+            font-family: Inter, Arial, "Malgun Gothic", sans-serif;
+            --bg: #f6f8fb;
+            --surface: #ffffff;
+            --ink: #172033;
+            --muted: #64748b;
+            --line: #d7dde8;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --soft: #eaf2ff;
+            --warn: #fff3d6;
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink); }
+        button, input { font: inherit; }
+        button {
+            min-height: 42px; border: 0; border-radius: 8px; padding: 0 14px;
+            background: var(--primary); color: white; font-weight: 800; cursor: pointer;
+        }
+        button:hover { background: var(--primary-dark); }
+        button.secondary { background: #dbeafe; color: var(--primary-dark); }
+        button:disabled { opacity: .6; cursor: wait; }
+        .app { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; }
+        aside { padding: 24px; background: #eef5ff; border-right: 1px solid var(--line); }
+        .brand { display: flex; gap: 12px; align-items: center; margin-bottom: 24px; }
+        .brand img { width: 44px; height: 44px; background: white; border: 1px solid var(--line); border-radius: 8px; padding: 5px; }
+        h1, h2, h3, p { margin-top: 0; }
+        .brand h1 { margin: 0; font-size: 22px; }
+        .brand span, .muted { color: var(--muted); }
+        .step { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: white; margin-bottom: 10px; }
+        main { padding: 28px clamp(16px, 4vw, 44px) 44px; }
+        .topbar { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+        .status-pill { padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; background: white; font-weight: 800; white-space: nowrap; }
+        .upload { max-width: 760px; margin: 0 auto 18px; background: white; border: 1px solid var(--line); border-radius: 8px; padding: 18px; }
+        .drop {
+            position: relative; min-height: 320px; display: grid; place-items: center; overflow: hidden;
+            border: 1px dashed #93b6ee; border-radius: 8px; background: var(--soft); text-align: center;
+        }
+        .drop input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+        #preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+        .loading .drop::after { content: "분석 중..."; position: absolute; inset: 0; display: grid; place-items: center; background: rgba(15, 23, 42, .55); color: white; font-size: 22px; font-weight: 900; }
+        .actions { display: flex; gap: 10px; margin-top: 12px; }
+        #status { margin-top: 12px; padding: 12px; border-radius: 8px; background: #eef2f7; color: var(--muted); }
+        .stats, .grid { display: grid; gap: 14px; }
+        .stats { grid-template-columns: repeat(3, 1fr); max-width: 960px; margin: 0 auto 18px; }
+        .stat, .panel { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+        .stat strong { display: block; margin-top: 4px; font-size: 28px; }
+        .grid { grid-template-columns: .9fr 1.2fr .9fr; align-items: start; }
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .chip { min-height: 32px; border-radius: 999px; background: #dbeafe; color: var(--primary-dark); font-size: 14px; }
+        .chip.missing { background: var(--warn); color: #995c00; }
+        .recipe { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfdff; margin-bottom: 10px; }
+        .recipe-head { display: flex; justify-content: space-between; gap: 10px; }
+        .badge { padding: 4px 8px; border-radius: 999px; background: #dbeafe; color: var(--primary-dark); font-size: 12px; font-weight: 900; white-space: nowrap; }
+        .cart-item { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+        .cart-item a { min-height: 34px; display: grid; place-items: center; border-radius: 8px; background: var(--primary); color: white; text-decoration: none; font-weight: 800; padding: 0 12px; }
+        .empty { color: var(--muted); }
+        @media (max-width: 980px) { .app, .grid { grid-template-columns: 1fr; } aside { border-right: 0; border-bottom: 1px solid var(--line); } }
+        @media (max-width: 640px) { .topbar, .actions { display: grid; } .stats { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="app">
+    <aside>
+        <div class="brand">
+            <img src="/assets/meal-gpt-logo.svg" alt="MealGPT 로고">
+            <div><h1>MealGPT</h1><span>AI meal planner</span></div>
+        </div>
+        <div class="step"><strong>1. 사진 업로드</strong><br><span class="muted">냉장고나 재료 사진을 선택</span></div>
+        <div class="step"><strong>2. 재료 인식</strong><br><span class="muted">Ollama 비전 모델로 분석</span></div>
+        <div class="step"><strong>3. 장바구니 연결</strong><br><span class="muted">부족한 재료를 구매 링크로 정리</span></div>
+    </aside>
+    <main>
+        <div class="topbar">
+            <div>
+                <h2>냉장고 사진으로 오늘의 식사를 정리하세요</h2>
+                <p class="muted">사진을 올리면 식재료를 인식하고 만들 수 있는 레시피와 부족한 재료를 보여줍니다.</p>
+            </div>
+            <div id="appStatus" class="status-pill">준비됨</div>
+        </div>
+
+        <section id="uploadPanel" class="upload">
+            <div class="drop">
+                <img id="preview" alt="업로드한 이미지 미리보기">
+                <input type="file" id="imageFile" accept="image/*">
+                <strong id="uploadText">사진을 선택하거나 끌어다 놓으세요</strong>
+            </div>
+            <div class="actions">
+                <button id="analyzeButton" onclick="analyzeImage()">분석 시작</button>
+                <button class="secondary" onclick="clearCart()">장바구니 비우기</button>
+            </div>
+            <div id="status">분석할 사진을 선택하세요.</div>
+        </section>
+
+        <div class="stats">
+            <div class="stat"><span class="muted">인식 재료</span><strong id="ingredientCount">0</strong></div>
+            <div class="stat"><span class="muted">추천 레시피</span><strong id="recipeCount">0</strong></div>
+            <div class="stat"><span class="muted">장바구니</span><strong id="cartCount">0</strong></div>
+        </div>
+
+        <div class="grid">
+            <section class="panel"><h3>인식한 재료</h3><div id="ingredients" class="chips"><span class="empty">아직 재료가 없습니다.</span></div></section>
+            <section class="panel"><h3>추천 레시피</h3><div id="recipes"><span class="empty">분석 후 레시피가 표시됩니다.</span></div></section>
+            <section class="panel"><h3>장바구니</h3><div id="cart"><span class="empty">담긴 재료가 없습니다.</span></div></section>
+        </div>
+    </main>
+</div>
+<script>
+const fileInput = document.getElementById("imageFile");
+const preview = document.getElementById("preview");
+const statusElement = document.getElementById("status");
+const appStatus = document.getElementById("appStatus");
+const analyzeButton = document.getElementById("analyzeButton");
+const uploadPanel = document.getElementById("uploadPanel");
+const uploadText = document.getElementById("uploadText");
+const ingredientCount = document.getElementById("ingredientCount");
+const recipeCount = document.getElementById("recipeCount");
+const cartCount = document.getElementById("cartCount");
+
+fileInput.addEventListener("change", () => {
+    const file = fileInput.files[0];
+    if (!file) return;
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = "block";
+    uploadText.style.display = "none";
+    setStatus(`${file.name} 준비 완료`, "대기");
+});
+
+function setStatus(message, shortStatus = "진행 중") {
+    statusElement.innerText = message;
+    appStatus.innerText = shortStatus;
+}
+function setCounters(ingredients = [], recipes = [], cartItems = []) {
+    ingredientCount.innerText = Array.isArray(ingredients) ? ingredients.length : 0;
+    recipeCount.innerText = Array.isArray(recipes) ? recipes.length : 0;
+    cartCount.innerText = Array.isArray(cartItems) ? cartItems.length : 0;
+}
+function renderIngredients(items) {
+    const element = document.getElementById("ingredients");
+    element.innerHTML = "";
+    if (!Array.isArray(items) || items.length === 0) {
+        element.innerHTML = '<span class="empty">아직 재료가 없습니다.</span>';
+        return;
+    }
+    items.forEach(item => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "chip";
+        button.innerText = item;
+        button.onclick = () => addIngredientToCart(item);
+        element.appendChild(button);
+    });
+}
+function renderRecipeChips(container, items, missingItems) {
+    (items || []).forEach(item => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = (missingItems || []).includes(item) ? "chip missing" : "chip";
+        chip.innerText = item;
+        chip.onclick = () => addIngredientToCart(item);
+        container.appendChild(chip);
+    });
+}
+function renderRecipes(recipes) {
+    const element = document.getElementById("recipes");
+    element.innerHTML = "";
+    if (!Array.isArray(recipes) || recipes.length === 0) {
+        element.innerHTML = '<span class="empty">추천할 레시피가 없습니다.</span>';
+        return;
+    }
+    recipes.forEach((recipe, index) => {
+        const article = document.createElement("article");
+        article.className = "recipe";
+        article.innerHTML = `<div class="recipe-head"><h3></h3><span class="badge">${index + 1}순위</span></div><p class="muted"></p>`;
+        article.querySelector("h3").innerText = recipe.name;
+        article.querySelector("p").innerText = recipe.description || "";
+        const chips = document.createElement("div");
+        chips.className = "chips";
+        renderRecipeChips(chips, recipe.ingredients, recipe.missing_ingredients);
+        article.appendChild(chips);
+        element.appendChild(article);
+    });
+}
+function renderCart(cartItems) {
+    const element = document.getElementById("cart");
+    element.innerHTML = "";
+    if (!Array.isArray(cartItems) || cartItems.length === 0) {
+        element.innerHTML = '<span class="empty">담긴 재료가 없습니다.</span>';
+        return;
+    }
+    cartItems.forEach(item => {
+        const row = document.createElement("div");
+        row.className = "cart-item";
+        row.innerHTML = `<div><strong></strong><br><span class="muted"></span></div><a target="_blank" rel="noreferrer">구매</a>`;
+        row.querySelector("strong").innerText = item.name;
+        row.querySelector("span").innerText = `${Number(item.quantity || 1)}개 필요`;
+        row.querySelector("a").href = item.buy_url;
+        element.appendChild(row);
+    });
+}
+async function addIngredientToCart(name) {
+    const response = await fetch("/cart/items", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, quantity: 1 })
+    });
+    const data = await response.json();
+    renderCart(data.cart);
+    cartCount.innerText = Array.isArray(data.cart) ? data.cart.length : 0;
+    setStatus(`${name} 장바구니에 추가됨`, "추가됨");
+}
+async function analyzeImage() {
+    const file = fileInput.files[0];
+    if (!file) {
+        alert("이미지를 선택하세요.");
+        return;
+    }
+    const formData = new FormData();
+    formData.append("file", file);
+    analyzeButton.disabled = true;
+    uploadPanel.classList.add("loading");
+    setStatus("사진을 분석하고 있습니다.", "분석 중");
+    try {
+        const response = await fetch("/analyze", { method: "POST", body: formData });
+        const data = await response.json();
+        if (!response.ok || data.error) {
+            setStatus(data.error || "분석에 실패했습니다.", "오류");
+            return;
+        }
+        renderIngredients(data.ingredients);
+        renderRecipes(data.recipes);
+        renderCart(data.cart);
+        setCounters(data.ingredients, data.recipes, data.cart);
+        setStatus("분석 완료", "완료");
+    } catch (error) {
+        setStatus("서버와 통신하지 못했습니다.", "오류");
+    } finally {
+        analyzeButton.disabled = false;
+        uploadPanel.classList.remove("loading");
+    }
+}
+async function clearCart() {
+    await fetch("/cart", { method: "DELETE" });
+    renderCart([]);
+    cartCount.innerText = 0;
+    setStatus("장바구니를 비웠습니다.", "대기");
+}
+async function loadCart() {
+    const response = await fetch("/cart");
+    const data = await response.json();
+    renderCart(data.cart);
+    cartCount.innerText = Array.isArray(data.cart) ? data.cart.length : 0;
+}
+loadCart();
+</script>
+</body>
+</html>

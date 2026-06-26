@@ -1,5 +1,7 @@
 .env
 venv/
+target/
+tools/
 __pycache__/
 *.py[cod]
 uploads/
