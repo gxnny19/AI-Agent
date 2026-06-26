@@ -1,6 +1,6 @@
 # MealGPT
 
-MealGPT는 냉장고나 식재료 사진을 업로드하면 Ollama 비전 모델로 재료를 인식하고, Spoonacular API로 추천 레시피와 부족한 재료 장바구니를 만들어 주는 Java Spring Boot 앱입니다.
+MealGPT는 냉장고나 식재료 사진을 업로드하면 Ollama 비전 모델로 재료를 인식하고, 보유 재료 기반으로 레시피를 추천하며, 부족한 재료를 장바구니에 추가할 수 있는 Java Spring Boot 애플리케이션입니다.
 
 ## 주요 기능
 
@@ -14,7 +14,7 @@ MealGPT는 냉장고나 식재료 사진을 업로드하면 Ollama 비전 모델
 ## 기술 스택
 
 - Java 17
-- Spring Boot 3
+- Spring Boot 3.5
 - Maven
 - Ollama HTTP API
 - HTML/CSS/JavaScript
@@ -27,7 +27,13 @@ Ollama가 실행 중이어야 하며, 기본 모델은 `llama3.2-vision:latest`�
 ollama pull llama3.2-vision:latest
 ```
 
-Spoonacular 레시피 검색을 사용하려면 환경 변수를 설정하세요.
+다른 모델을 사용하려면 환경 변수를 설정하세요.
+
+```powershell
+$env:OLLAMA_MODEL="llama3.2-vision:latest"
+```
+
+Spoonacular 레시피 검색을 사용하려면 API 키를 설정하세요. 키가 없으면 내장 레시피 추천 로직을 사용합니다.
 
 ```powershell
 $env:SPOONACULAR_API_KEY="your-api-key"
@@ -35,13 +41,13 @@ $env:SPOONACULAR_API_KEY="your-api-key"
 
 ## 실행 방법
 
-Java 17과 Maven을 설치한 뒤 실행합니다. 이 저장소에서는 Maven 3.9.16을 `tools/apache-maven-3.9.16`에 내려받아 사용할 수 있게 준비했습니다.
+Java 17과 Maven이 필요합니다.
 
 ```powershell
 mvn spring-boot:run
 ```
 
-현재 PowerShell 세션에서 `mvn`이 바로 잡히지 않으면 아래처럼 실행하세요.
+현재 PowerShell 세션에서 `mvn`을 바로 사용할 수 없다면 Java와 Maven 경로를 먼저 설정한 뒤 실행하세요.
 
 ```powershell
 $env:JAVA_HOME="C:\Program Files\Eclipse Adoptium\jdk-17.0.19.10-hotspot"
@@ -73,4 +79,19 @@ http://127.0.0.1:8000/ai-page
 
 ```powershell
 mvn test
+```
+
+## 프로젝트 구조
+
+```text
+.
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/com/mealgpt/
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       └── static/
+│   └── test/
+└── uploads/
 ```

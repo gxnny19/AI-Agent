@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8080}
+
+meal-gpt:
+  ollama:
+    base-url: ${OLLAMA_BASE_URL:http://127.0.0.1:11434}
+    model: ${OLLAMA_MODEL:llava:latest}
+  spoonacular:
+    api-key: ${SPOONACULAR_API_KEY:}
+  upload-dir: ${UPLOAD_DIR:uploads}
+  openclaw:
+    gateway-url: ${OPENCLAW_GATEWAY_URL:http://localhost:8000/v1/agent/run}
+    cooking-agent-id: ${OPENCLAW_COOKING_AGENT_ID:cooking-guide-agent}
+    shared-secret: ${OPENCLAW_SHARED_SECRET:}

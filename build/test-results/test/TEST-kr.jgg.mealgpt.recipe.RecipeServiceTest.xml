@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kr.jgg.mealgpt.recipe.RecipeServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-06-25T22:56:25" hostname="C302-50" time="0.116">
+  <properties/>
+  <testcase name="koreanRecipeTitleDoesNotKeepLeadingHyphen()" classname="kr.jgg.mealgpt.recipe.RecipeServiceTest" time="0.101"/>
+  <testcase name="rankAndFilterValidatesArguments()" classname="kr.jgg.mealgpt.recipe.RecipeServiceTest" time="0.003"/>
+  <testcase name="calculateScorePrefersHighMatchSimpleRecipe()" classname="kr.jgg.mealgpt.recipe.RecipeServiceTest" time="0.005"/>
+  <testcase name="calculateScoreRejectsBadRecipe()" classname="kr.jgg.mealgpt.recipe.RecipeServiceTest" time="0.001"/>
+  <testcase name="rankAndFilterOrdersByScore()" classname="kr.jgg.mealgpt.recipe.RecipeServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

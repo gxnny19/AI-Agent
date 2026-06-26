@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kr.jgg.mealgpt.cart.CartServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-06-25T22:56:25" hostname="C302-50" time="0.066">
+  <properties/>
+  <testcase name="cartDoesNotDisplayUnknownEnglishIngredients()" classname="kr.jgg.mealgpt.cart.CartServiceTest" time="0.045"/>
+  <testcase name="removesCartItemByKoreanName()" classname="kr.jgg.mealgpt.cart.CartServiceTest" time="0.011"/>
+  <testcase name="cartDisplaysKnownEnglishIngredientsInKorean()" classname="kr.jgg.mealgpt.cart.CartServiceTest" time="0.001"/>
+  <testcase name="updatesQuantityAndBuyUrlTogether()" classname="kr.jgg.mealgpt.cart.CartServiceTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

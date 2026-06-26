@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kr.jgg.mealgpt.ingredient.IngredientServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-06-25T22:56:25" hostname="C302-50" time="0.016">
+  <properties/>
+  <testcase name="extractsStringArrayAndNormalizesEnglish()" classname="kr.jgg.mealgpt.ingredient.IngredientServiceTest" time="0.012"/>
+  <testcase name="recoversNamesFromBrokenJson()" classname="kr.jgg.mealgpt.ingredient.IngredientServiceTest" time="0.002"/>
+  <testcase name="keepsSpecificCreamTypesInKorean()" classname="kr.jgg.mealgpt.ingredient.IngredientServiceTest" time="0.001"/>
+  <testcase name="extractsObjectArrayWithKoreanNameKeys()" classname="kr.jgg.mealgpt.ingredient.IngredientServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,14 @@
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\config\AppConfig.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\config\MealGptProperties.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\controller\MealGptController.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\controller\PageController.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\MealGptApplication.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\model\CartItem.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\model\CartItemRequest.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\model\Recipe.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\service\CartService.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\service\IngredientService.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\service\PantryService.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\service\RecipeService.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\service\TextUtils.java
+C:\jgg\AI-Agent\src\main\java\com\mealgpt\service\UploadService.java
